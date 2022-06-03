@@ -1,0 +1,223 @@
+<!--DEFINICION DE HTML-->
+<!DOCTYPE html>             <!--INDICA QUE ES HTML5-->
+<html lang = "es">          <!--PARA QUE EL NAVEGADOR TENGA EN CUENTA EL IDIOMA-->
+    <head>                  <!--AQUI VAN ALGUNAS DEFINICIONES Y SENTENCIAS-->
+        <meta charset = "UTF-8">         <!--PARA QUE LA WEB PUEDA ENTENDER CARACTERES ESPECIALES-->
+        <meta name = "descripcion" content = "Esta es una pagina de prueba">    <!--ESTO MOSTRARA UNA BREBE DESCRIPCION DE LA WEB EN GOOGLE-->
+        <meta name = "robots" content = "index, follow">                        <!--PARA QUE ALGUNOS ALGORITMOS O ROBOTS DE GOOGLE HAGAN MAS VISIBLE Y SUGIERA NUESTRA WEB-->
+        <meta name = "viewport" content = "width = device-width, inictial-scale = 1.0">  <!--PARA QUE SE ADAPTE EL TAMAÑO A LA PANTALLA DE LA PC O MOVIL-->
+        <title>Mi Web Pro</title>        <!--TITULO DE LA PESTAÑA DE NUESTRA WEB-->
+        <link rel="stylesheet" href="CSS">  <!--PARA LOS ESTILOS CSS Y QUE JALE SEGUN LA DIRECCION-->
+        <style>
+            img{
+                width: 400px;
+            }
+            body{
+                background-color: rgb(12, 124, 124);
+            }
+        </style>
+    </head>
+
+    <body>
+        <!--CABECERA DE LA WEB-->
+        <header>            
+            <!--BARRA DE NAVEGACION QUE VA DENTRO DEL HEADER-->
+            <nav>           
+
+            </nav>
+        </header>
+
+        <!--CONTENIDO PRINCIPAL DE LA WEB-->    
+        <main>     
+            <h1>Mi Pagina Web</h1>         
+            <p>
+                I had a great weekend. On Friday afternoon, I finished work at 5 PM. I went home and took a shower. Then I went to see a couple of my friends at a bar downtown. 
+                We had a couple of beers and a nice talk. Tom told us about his new job, and Jim told us about his new girlfriend. After a while, we went to a restaurant and had pizza. I went to bed late that night, but I was very happy.
+                On Saturday morning I went running in the park. I ran 5 kilometers, and then came home.
+                After that, I met my girlfriend for lunch. We went to a Thai restaurant near my house. I love Thai food!
+                I spent the evening with my girlfriend, watching TV on the sofa.
+                The next day, I got up and caught the train to my parents’ town. I  go to see my parents on Sundays, at least twice a month.
+            </p>
+            <!--SECCIONES EN EL CONTENIDO PRINCIPAL-->
+            <section>       
+                <!--ETIQUETA QUE INDICA AL NAVEGADOR QUE SE TRABAJARA AQUI CON IMAGENES-->
+                <figure>    
+                    <!--PARA IMAGEN-RUTAIMAGEN Y TEXTO EN CASO DE QUE HAYA UN PROBLEMA CON LA IMAGEN-->
+                    <img src="./imagenes/barco.jpg" alt="Esto es un barco grande">    
+                    <!--ETIQUETA PARA PONER PIE DE FOTO-->
+                    <figcaption>Imagen de barco en 1998</figcaption>      
+                </figure>
+
+                <!--PARA ARTICULO, PUEDE HABER MUCHOS ARTICULOS DENTRO DE UNA SECCION-->
+                <article>   
+                </article>
+
+                <!--ETIQUETA PARA VIDEO + DIRECCION DE VIDEO + CONTROLS PARA QUE SE REPRODUZCA + PRELOAD PARA QUE CARGUE EL VIDEO
+                CUANDO SE ENTRE A LA PAGINA (NO QUE SE REPRODUZCA) + #=4,8 ES PARA INDICAR EL SEGUNDO DE INICIO Y FINAL DEL VIDEO-->
+                <video src = "./videos/X2Download.com-HOMBRES SIENDO HOMBRES 😆 .mp4#t=4,8" controls preload = "auto"></video> 
+                
+            </section>
+
+            <!--LISTA DESORDENADA BOOLEDS (PUNTITOS)-->
+            <ul>       
+                <li>Elemento de esta lista desordenada</li>
+                <li>Compras de la semana</li>
+            </ul>
+
+            <!--LISTA ORDENADA Y NUMERADOS-->
+            <ol>       
+                <li>Elemento de esta lista ordenada soy el numero 1 :)</li>
+                <li>Manzana</li>
+                <li>Platano</li>
+                <li>Mandarina</li>
+            </ol>
+
+            <!--ETIQUETA DE PARRAFO-->
+            <p>                 
+                Este es un parrafo
+            </p>
+            <!--LAS H's SON PARA TITULOS CON TAMAÑOS POR DEFECTO DE H1 - H6-->
+            <h1>                
+                Este es un titulo tamaño grande por defecto
+            </h1>
+            <h2>
+                Este es el segundo titulo un poco pequeño
+            </h2>
+            <h3>
+                Este es el tercer titulo mas pequeño
+            </h3>
+            <h4>
+                Este es el cuarto titulño con tamaño mas pequeño
+            </h4>
+            <h5>
+                Este es el quinto titulo peque
+            </h5>
+            <h6>
+                Este es el ultimo titulo de tamaño mas peque por defecto
+            </h6>
+           
+            <!--PARA PONER VINCULO - LINK-->
+            <a href="https://www.youtube.com/watch?v=_zSo7X3J_sY">Soy un link</a>  
+
+            <!--PARA CREAR UN FORMULARIO CREAMOS ETIQUETA FORM + UNA FUNCION PARA LA BASE DE DATOS (NO OBLIGATORIO)-->
+            <form action = "">                                       
+                <!--LABEL QUE CONTENDRA LA CAJITA DE TEXTO + FUNCION DE EL ID DONDE IRA EL TEXTO A LA BD-->
+                <label for="nombre">                                 
+                    <!--SPAN PARA TITULO DEL LABEL-->
+                    <span>Cual es tu nombre?</span>                  
+                    <!--TIPO DE DATO "TEXTO" QUE SE PONDRA + ID DE DONDE IRA EL TEXTO (DEBE SER EL MISMO ID DEL LABEL FOR + 
+                    PLACEFOLDER QUE ES EL TEXTO DE FONDO POR DEFECTO DE ESE LABEL)-->
+                    <input type = "text" id = "nombre" placeholder = "Ponga su nombre"> 
+                </label>
+                <label for="nacimiento">
+                    <span>Cual es tu fecha de nacimiento?</span>
+                    <!--TIPO DE DATO "FECHA" EL NAME HACE REFERENCIA A CUAL Y QUE DATO ESTAMOS ENVIANDO (LE PONE NOMBRE)-->
+                    <input type = "date" id = "nacimiento" name = "nacimiento">         
+                </label>
+                <label for="hora">
+                    <span>Cuanto tiempo duerme?</span>
+                    <!--TIPO DE DATO "HORA"-->
+                    <input type = "time" id = "hora" name = "hora">             
+                </label>
+                <label for="dia">
+                    <span>Dia</span>
+                    <!--TIPO DE DATO "DIA"-->
+                    <input type = "date" id = "dia" name = "dia">             
+                </label>
+                <label for="semana">
+                    <span>Semana</span>
+                    <!--TIPO DE DATO "SEMANA"-->
+                    <input type = "week" id = "semana" name = semana>             
+                </label>
+                <label for="mes">
+                    <span>Mes</span>
+                    <!--TIPO DE DATO "MES"-->
+                    <input type = "month" id = "mes" name = mes>             
+                </label>
+
+                <!--ETIQUETA PARA CREAR BOTON DE SUBNIT (ENVIAR) Y ENVIA TODO A LA BD SE RECOMIENDA USARLO PARA FORMULARIOS XQ ENVIA
+                LOS DATOS INTRODUCIDOS DIRECTAMENTE-->
+                <input type = "submit">                        
+
+            </form>
+
+            <!--OTRA MANERA DE INDICAR FECHA Y HORARIO-->
+            <form action="">
+                <label for="calendario">
+                    <span>Calendario</span>
+                    <!--EL DATETIME-LOCAL CAPTA LA FECHA Y HORA DEL ORDENADOR-->
+                    <input type = "datetime-local" id = "calendario" name = "calendario"> 
+                </label>
+                <input type = "submit">
+            </form>
+
+            <!--PARA LLENADO DE FORMULARIOS AUTOCOMPLETAR CON ANTIGUOS DATOS QUE SE HABIAN INTRODUCIDO-->    
+            <form action="">
+                <label for="nombre">
+                    <span>Cual es tu nombre?</span>
+                    <!--CON EL AUTOCOMPLETE SE AUTOLLENA CON ALGUNOS ATRIBUTOS QUE OTRAS VECES SE PUSIERON SEGUN EL ATRIBUTO +
+                    REQUIRED NO DEJA ENVIAR CUANDO HAY UN CAMPO VACIO-->
+                    <input type="text" name = "nombre" id="nombre" autocomplete="name" required> 
+                </label>
+                <label for="correo">
+                    <span>Cual es tu correo?</span>
+                    <input type="email" name = "correo" id="correro" autocomplete="email" required>
+                </label>
+                <label for="pais">
+                    <span>Cual es tu pais?</span>
+                    <input type="text" name = "pais" id="pais" autocomplete="country" required>
+                </label>
+                <label for="cp">
+                    <span>Cual es tu codigo postal?</span>
+                    <input type="text" name = "cp" id="cp" autocomplete="postal-code" required>
+                </label>
+                <input type="submit">
+            </form>
+
+            <!--PARA DEPLEGAR UN MENU DE OCIONES COMO TEXTBOX-->
+            <!--NOMBRE DE FUNCION QUE LLEVARA + ID DE IDENTIFICAR QUE ATRIBUTO-->
+            <select name="cursos" id="">     
+                <option value="JavaScript">JavaScript</option>
+                <option value="HTML5">HTML5</option>
+                <option value="CSS3">CSS3</option>
+                <option value="Boostrap">Boostrap</option>
+            </select>
+           
+            <!--PARA UNA MEJOR PRACTICA DE DESPLIEGUE DE MENU DE OPCIONES COMO TEXTBOX-->
+            <!--ENTRADA DE....-->
+            <input list = "cursos">                  
+            <!--ETIQUETA CON ID QUE TENDRA LA OPCION ELEGIDA-->
+            <datalist id = "cursos">             
+                <!--VALORES U OPCIONES QUE TENDRA EL DESPLIEGUE DE OPCIONES-->    
+                <option value="JavaScript"></option>
+                <option value="HTML5"></option>
+                <option value="CSS3"></option>
+                <option value="Boostrap"></option>
+            </datalist>
+
+            <!--SALTO DE LINEA-->
+            <br>
+            Otra linea
+            <br>
+            Otra linea
+            <br>
+            Otra linea
+            
+            <!--BOTONES-->
+            <!--ESTE BOTON ES INPUT (ENTRADA DE DATOS) MAS USADO PARA FORMULARIOS XQ ENVIA LOS DATOS A LA BD DIRECTAMENTE-->
+            <input type="submit">     
+            <!--POR SI QUEREMOS CAMBIAR EL TEXTO DEL BOTON AUTOMATICO PARA ENVIAR DATOS-->
+            <input type="submit" value="Boton pro"> 
+            <!--BOTON MAS ACCESIBLE PARA PERSONALIZAR SU USO-->
+            <button>Botoncito</button>   
+            <!--BOTON PERSONALIZABLE Y A DEMAS QUE ENVIA LOS DATOS DE FORMULARIO-->
+            <button type = "submit">Enviar Datos</button> 
+        </main>
+
+        <footer>            <!--PARTE FINAL DE LA WEB-->
+
+        </footer>
+
+    </body>
+    
+</html>

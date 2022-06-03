@@ -1,0 +1,151 @@
+/*SELECTOR UNIVERSAL PARA RESETEAR ESTILOS DEL NAVEGADOR POR DEFECTO*/
+*{
+    box-sizing: border-box; /*PARA QUE SE AUTOCALCULE A CUALQUIER TAMAÑO DE PANTALLA*/
+    padding: 0;         /*padding:0px 9px 0px 9px;......Arriba, derecha, abajo, izq*/ 
+    margin: 0;          /*margin:0px 9px 0px 9px;.......Arriba, derecha, abajo, izq*/
+
+    /*ESTA SENTENCIA ES PARA QUE TODOS LOS BORDESD, PADDINGS Y OTRAS DIMENSIONES EXCEPTO
+    EL MARGIN SE AUTOSUMEN Y CALCULEN AUTOMATICAMENTE PARA QUE FORME EL 100% DEL WIDTH (ANCHO)*/
+    box-sizing: border-box;
+}
+
+/*AQUI SE ESTA CAMBIANDO EL ESTILO DE TODA ETIQUETA QUE SEA P (<p>)*/
+p{
+    font-size: 20px;
+}
+
+/*AQUI SE ESTA IDENTIFICANDO A CADA ETIQUETA CON EL NOMBRE DE UNA CLASE*/
+.parrafo{
+    color: coral;
+    font-size: 40px;
+}
+
+/*AQUI SE ESTA IDENTIFICANDO A CADA ETIQUETA CON UN ID*/
+#texto{
+    color: black;
+    font-size: 30px;
+}
+
+body{
+    background-color: rgb(6, 100, 100);
+    width: 100%;                  /*Tamaño de ancho*/
+    height:100px;                 /*Tamaño de alto*/
+
+
+.ul_header{     
+    background-color: brown;
+    list-style: none;
+}
+
+.ul_header_li{
+    display: inline-block;    /*Poner de forma horizontal*/
+}
+
+.ul_header_li a{
+    color: rgb(0, 255, 234);
+    font-size: 50px;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: black;
+}
+
+/*PONIENDO SALVAPANTALLA AL TEXTO DE ETIQUETAS "a" DENTRO DE CLASE "ul_header_li"*/
+.ul_header_li a:hover{
+    color: orange;   /*CUANDO SE PASA EL MOUS CAMBIA DE COLOR*/
+}
+
+/*PONIENDO SALVAPANTALLA AL TEXTO DE ETIQUETAS "a" DENTRO DE CLASE "ul_header_li"*/
+.ul_header_li a:active{
+    color: white;    /*CUANDO SE HAGA CLICK O SE SELECCIONE TENDRA UN COLOR*/
+}
+
+/*PONIENDO UN SEPARADOR DESPUES DE ETIQUETAS "a" (TEXTOS)*/
+.ul_header_li a::after{
+    content: " |--";
+}
+
+.footer{
+    background-color: violet;
+}
+
+.parrafo_ingles{
+    font-size: 30px;
+    color: white;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+/*APLICANDO COMBINADORES PARA HACER MAS ESPECIFICO LOS ESTILOS ENTRE ELEMENTOS*/
+/*CAMBIA DE COLOR A ETIQUETA PARRAFO QUE ESTE CERCA O DEBAJO DE UN H2*/
+h2 + p{            
+    color: blueviolet;
+}
+
+/*CAMBIA DE COLOR A ETIQUETA PARRAFO QUE ESTE EN LA MISMA SECUENCIA O SE LLAMA HERMANO GENERAL DE UN H2*/
+h2 ~ p{
+    color: aqua;
+}
+
+/*CAMBIA DE COLOR A TODA ETIQUETA PARRAFO QUE SON HIJA DIRECTO EN ESTE CASO DE UN DIV (CHILD)*/
+div > p{
+    color: green;
+}
+
+/*CAMBIA DE COLOR TODA ETIQUETA QUE ESTE DENTRO DE OTRA ETIQUETA EN ESTE CASO UN DIV*/
+div h1{
+    color: blue;
+}
+
+/*EL EM TOMA EL TAMAÑO DE FUENTE QUE TENGA EL PADRE DIRECTO Y LO MULTIPLICA POR LA CANTIDAD QUE LE DIGAMOS*/
+#parrafo{
+    font-size: 1em;
+}
+/*EL REM TOMA EL TAMAÑO DE HTML QUE ES 16PX Y LO MULTIPLICA CON LA CANTIDAD QUE LE DIGAMOS PERO YA NO SERA ASI CON EL TRUPO*/
+#parrafo{
+    font-size: 1.6rem; /*SERIAN 16 PX GRACIAS A QUE MODIFICAMOS EL TAMAÑO DEFAULT DE HTML*/
+}
+html{
+    font-size: 62.5%; /*ESTA CONFIGURACION VA SIEMPRE AL PRINCIPIO*/
+}
+
+main{
+    width: 100vw;       /*ES COMO CALCULAR EL PORCENTAJE DE CADA PANTALLA SE LOS CONOCE COMO SI FUERA PORCENTAJE*/
+    height: 100vw;
+    background-color: blueviolet;
+}
+
+section{
+    width: 80%;
+    min-width: 320px;       /*PARA MIN-WIDTH NECESITAMOS UN WIDTH ANTERIOR EN PORCENTAJE Y CAUNDO SE ANCHEE SIEMPRE OCUPARA 320PX EN ESTE CASO limita achicarse hasta llegar hasta 320px*/
+    max-width: 500px;       /*LIMITA EL CRECIMIENTO EN ESTE CASO HASTA 500px ESTOS MAX Y MIN SON MAS UTILIZADOS PARA MODO PANTALLA TELEFONO*/
+    min-height: 500px;      /*MINIMO DE TAMAÑO 500PX PERO SI HAY MAS CONTENIDO EXTIENDETE HASTA TERMINAR ESE CONTENIDO*/
+    margin: 0 auto;       /*EL AUTO SIRVE PARA IGUALAR SOLO LA PARTE HORIZONTAL IZQ Y DER SI ES QUE ESTA DESIGUAL Y SI ESTA PUES LE AUMENTA*/
+    background-color: red;
+}
+
+div{
+    position: absolute;    /*CAMBIAMOS DE POSISIONAMIENTO DE STATIC A ABSOLUTE AQUI PIERDE SU LUGAR ANTE OTRAS CAJAS Y SE PONE DE TRAS DE TODO*/
+    top: 20px;
+}
+div{
+    position: relative;    /*CAMBIAMOS DE POSISIONAMIENTO DE STATIC A relative AQUI NO PIERDE SU LUGAR Y SE LO PUEDE MOVER A CUALQUIER DIRECCION*/
+    bottom: 15px;
+}
+
+
+
+
+
+/*
+
+border: dotted;...............Para que el borde de una caja sea segmentada
+border:3px dashed red;........Pa poner tipo de borde+color
+border-width:20px;....... ....Pa el tamaño del borde
+border_radius: 20px;..........Pa cambiar esquinas d la caja
+list-style:none;..............Anular estilos de lista
+text_decoration: none.........Pa sacar cualquier adorno de texto
+box-sizing: border-box;.......Para que se sumen las dimensiones
+font-family:Times.............Pa cambiar la fuente de texto
+!important....................Hace primordial primero ese estilo*/
+

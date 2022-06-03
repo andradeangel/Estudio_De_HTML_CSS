@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset = "UTF-8">       
+        <meta name = "descripcion" content = "Esta es una pagina de prueba">    
+        <meta name = "robots" content = "index, follow">               
+        <meta name = "viewport" content = "width = device-width, inictial-scale = 1.0">  
+        <title>Mi Web Pro Con CSS</title>    
+        
+        <!--ESTO ES PARA INDICAR LA DIRECCION DEL CSS SIEMPRE VA EN EL HEAD       (1RA FORMA DE HACER CSS)-->
+        <link rel="stylesheet" href="./style.css">
+
+        <!--ESTO ES LA ETIQUETA DONDE SE PONEN LOS ESTILOS                        (2DA FORMA DE HACER CSS)-->
+        <style>          
+             /*p{
+                 color: brown; /*EN Style SIEMPRE SE TERMINA CON UN (;)
+             }*/
+        </style>
+    </head>
+
+    <body>
+
+        <!--------------------------------------------------------------------------------------------
+            SE PONE style PARA DEFINIR ESTILOS QUE TENDRA TODA ESTA ETIQUETA      (3RA FORMA DE HACER CSS)
+            <p style="color:brown">Soy un texto</P>
+        ---------------------------------------------------------------------------------------------->
+        
+        <header>
+            <nav>
+                <!--SE RECOMIENDA DEFINIR LAS CLASES O IDS SIEMPRE PARA UN GUPO DE ETIQUETAS SIMILARES
+                Y QUE TENDRAN CSS SIMILARES PARA NO ALTERAR OTRAS MISMAS ETIQUETAS MAS ADELANTE-->
+                <ul class = "ul_header"> <!--NOMBRE DE LA CLASE RELACIONADO CON LAS ETIQUETAS INVOLUCRADAS-->
+                    <li class="ul_header_li"><a href="">Home</a></li>     
+                    <li class="ul_header_li"><a href="">Usuario</a></li>
+                    <li class="ul_header_li"><a href="">Listas</a></li>    <!--PUEDEN HABER CLASES REPETIDAS SI SE ADMINISTRA BIEN-->
+                    <li class="ul_header_li"><a href="">Inventario</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <ul>
+                    <li>
+                         
+                    </li>
+                </ul>
+            </section>
+            holi
+            <!--SE DEFINE UNA CLASE (DEBE SER UNICA) PARA LLEVAR ESTA ETIQUETA A ESTILOS CSS-->
+            <p class = "parrafo"> El segundo texto</p>
+            <P id = "texto">El tercer texto</P>
+
+            <h1>
+                <p class="parrafo_ingles">
+                    Están especialmente seleccionados para practicar y desarrollar habilidades de lectura y comprensión.
+                    Los estudiantes de los niveles principiante y elemental A1 y A2, como así también los más avanzados de nivel intermedio
+                    B1 podrán mejorar el vocabulario y la construcción de estructuras gramaticales a través de ellos.
+                    Cada lectura finaliza con 5 preguntas de opción múltiple para evaluar la comprensión. Es un recurso accesible,
+                    adecuado al nivel idiomático de cada estudiante y gratis. Además, los textos pueden descargarse e imprimirse.
+                </p>
+            </h1>
+        </main>
+
+        <footer class="footer">
+            <ul>
+                Enlaces
+            </ul>
+        </footer>
+    </body>
+
+</html>
